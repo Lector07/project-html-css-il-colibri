@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Zarezerwuj stolik online w łatwy i szybki sposób. Wybierz dogodną datę, godzinę oraz liczbę osób i ciesz się niezapomnianym doświadczeniem w naszej restauracji.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Colibri - Rezerwacja</title>
+    <script src="js/il-colibri-script.js" defer></script>
+    <link rel="stylesheet" href="css/reservation-style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="il-colibri.html">Il Colibrì</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main-container">
+    <section class="reservation" id="reservation">
+        <div class="reservation-content">
+            <h3>Rezerwacja Stolika</h3>
+            <form id="reservation-form">
+                <label for="date">Wybierz dzień:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="table">Podaj ilość osób:</label>
+                <select id="table" name="table" required>
+                    <option value="" disabled selected>Wybierz ilość osób</option>
+                    <option value="1">2 osoby</option>
+                    <option value="2">4 osoby</option>
+                    <option value="3">6 osób</option>
+                </select>
+
+                <label for="time">Wybierz godzinę:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Adres email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="button" id="reserve-table">REZERWUJ STOLIK</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>GODZINY OTWARCIA:<span>WT - ND 10:00 - 22:00</span></p>
+        </div>
+        <div class="footer-content">
+            <p>LOKALIZACJA:<span>UL. Wiktora Emanuela 4, 35-326 RZESZÓW</span></p>
+        </div>
+        <div class="footer-content">
+            <p>KONTAKT:<span>TEL. 666 555 444, osteria@ilcolibri.pl</span></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1907 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+.main-container {
+    width: auto;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main-container::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-container {
+    width: auto;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+
+.nav-container {
+    background-color: #000;
+    opacity: 87%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container .logo {
+    font-size: 1.5rem;
+    margin-left: 8%;
+}
+
+.nav-container .menu {
+    display: flex;
+    gap: 15px;
+    font-size: 1.125rem;
+    margin-right: 8%;
+}
+
+.logo:hover {
+    animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+.menu a:hover {
+    text-decoration: underline;
+    animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+body {
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+.main-content p {
+    animation: tracking-in-expand-fwd-bottom 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+    0% {
+        letter-spacing: -0.2em;
+        transform: translateZ(-100px) translateY(200px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+.main-content {
+    background-image: url("../img/tlo.webp");
+    backdrop-filter: contrast(0.2) brightness(0.4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    scroll-snap-align: start;
+}
+.main-content h1 {
+    font-size: 4.0625rem;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 15px 24px rgba(0, 0, 0, 1);
+    margin-bottom: 10%;
+    border: 5px solid white;
+    padding: 10px 20px;
+    animation: shadow-drop-2-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes shadow-drop-2-center {
+    0% {
+        transform: translateZ(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: translateZ(50px);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+    }
+}
+.main-content p {
+    margin-bottom: 10%;
+    padding: 0;
+    font-size: 2.25rem;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: normal;
+    color: white;
+    text-shadow: 0 15px 24px rgba(0, 0, 0, 1);
+}
+
+.reservation {
+    background-color: #ffffff;
+    color: black;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    scroll-snap-align: center;
+}
+
+.reservation-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    clear: right;
+}
+
+.reservation-content img {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.reservation-content img.animate {
+    animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-in-center {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+    }
+}
+
+.reservation-content-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    clear: right;
+}
+
+.reservation-content-child h3 {
+    font-size: 1.75rem;
+}
+
+.reservation-content-child p {
+    font-size: 1.125rem;
+    text-align: justify;
+    clear: right;
+    margin: 5%;
+}
+
+#go-to-reservation {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#go-to-reservation:hover {
+    background-color: #333;
+}
+
+.about {
+    background-color: #151515;
+    color: white;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    scroll-snap-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    clear: left;
+}
+
+.about-content img {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.about-content img.animate {
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes shadow-drop-2-center {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+    }
+}
+
+.about-content-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    clear: right;
+}
+
+.about-content-child h3 {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: normal;
+    margin-bottom: 80px;
+    font-size: 1.75rem;
+}
+
+.about-content-child p {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: lighter;
+    color: white;
+    font-size: 1.125rem;
+    text-align: justify;
+    clear: left;
+    margin: 12%;
+}
+
+.wine {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+.wine::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background-image: url("../img/tlo2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.6);
+    z-index: -1;
+}
+
+
+.wine-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.wine-content p {
+    font-size: 1.125rem;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: lighter;
+    color: white;
+    text-align: justify;
+    margin-left: 8%;
+    margin-right: 8%;
+    flex: 1;
+}
+
+.wine-content h3 {
+    font-size: 1.75rem;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: right;
+    margin-bottom: 80px;
+    margin-right: 8%;
+    margin-left: 20%;
+    flex: 1;
+}
+
+.wine-content h3.animate {
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 0.2em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+
+.dish-menu-primi {
+    background-color: #151515;
+    color: white;
+    height: 100vh;
+    width: auto;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    scroll-snap-align: center;
+}
+
+.dish-menu-primi h3 {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: justify;
+    margin-left: 8%;
+    margin-right: 8%;
+    flex: 1;
+}
+
+.dish-menu-primi h3.animate {
+    animation: tracking-in-contract 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 0.1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+
+.primi-child h4 {
+    font-size: 1.75rem;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.primi-child {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+
+.primi-child p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: right;
+    margin-right: 8%;
+}
+
+.primi-child p span {
+    display: block;
+    margin-left: 20px;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+
+.primi-child p:first-child {
+    font-weight: bold;
+}
+
+.dish-menu-secondi {
+    scroll-snap-align: center;
+    background-color: #0b0b0b;
+    color: white;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.dish-menu-secondi img {
+    margin-left: 8%;
+}
+
+.dish-menu-secondi img.animate {
+    animation: scale-down-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-down-center {
+    0% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+
+
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+
+    }
+}
+
+.secondi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.secondi-child h4 {
+    font-size: 1.75rem;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+.secondi-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    clear: right;
+    margin-bottom: 10%;
+}
+
+.secondi-child {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.secondi-child p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.secondi-child p span {
+    display: block;
+    margin-left: 20px;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.secondi-child p:first-child {
+    font-weight: bold;
+}
+
+.tiles {
+    scroll-snap-align: center;
+    background-color: #f9f9f9;
+    color: black;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.tiles p:first-child {
+    margin-top: 12%;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.tiles p span {
+    display: block;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 7%;
+    align-items: flex-end;
+}
+
+.tile {
+    position: relative;
+    width: auto;
+    height: 225px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tile .caption {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000000;
+    padding: 5px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    pointer-events: none;
+}
+
+.tile:hover .caption {
+    opacity: 1;
+    bottom: -50px;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    color: #000;
+    width: auto;
+    height: 30vh;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+}
+
+.newsletter-content {
+    text-align: left;
+    border-right: 50px;
+    margin-left: 8%;
+}
+
+.newsletter-form {
+    margin-right: 8%;
+}
+
+.newsletter-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    font-size: 1rem;
+}
+
+.newsletter-form form {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    width: 250px;
+}
+
+.newsletter-form button {
+    margin-bottom: 3%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #333;
+}
+
+.newsletter {
+    margin-bottom: 60px;
+}
+
+footer {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+footer.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content p {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content span {
+    font-weight: lighter;
+}
+
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 30vh;
+    text-align: center;
+}
+
+.newsletter-content {
+    margin-bottom: 10px;
+}
+
+.newsletter-content h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    font-size: 0.8125rem;
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+
+.newsletter-form button:hover {
+    background-color: #333;
+}
+
+footer {
+    padding: 10px 0;
+}
+
+.footer-content p {
+    font-size: 0.75rem;
+}
+
+
+@media (min-width: 320px) {
+
+    .primi-child p {
+        font-size: 1rem;
+    }
+
+    .primi-child p span {
+        font-size: 0.875rem;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .main-content h1 {
+        font-size: 2rem;
+        position: relative;
+        margin-bottom: 50%;
+    }
+
+    .main-content p {
+        font-size: 1.125rem;
+        margin: 2%;
+    }
+
+    .dish-menu-secondi img {
+        display: none;
+    }
+
+
+    .newsletter-form input[type="email"] {
+        width: 70%;
+        height: 70%;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+
+    .newsletter-form button {
+        width: 70%;
+        margin-left: 5%;
+    }
+
+    footer {
+        padding: 12px 0;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+        margin-left: 5%;
+    }
+    .footer-container p {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 430px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 55px;
+    }
+
+    .hamburger div {
+        width: 28px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 20px 0 0;
+        transition: 0.4s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu a:hover {
+        background-color: #333;
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .reservation-content, .about-content {
+        flex-direction: column;
+    }
+
+    .reservation-content img, .about-content img {
+        margin: 20px 0;
+        max-width: 50%;
+    }
+
+
+    .about-content h3 {
+        margin-top: 20%;
+    }
+
+    .reservation-content-child h3 {
+        margin-bottom: 2%;
+    }
+
+    .reservation-content button {
+        margin-bottom: 10%;
+    }
+
+    .about-content-child p {
+        margin: 5%;
+        font-size: 0.8125rem;
+    }
+
+    .reservation-content-child p {
+        margin-bottom: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 0.8125rem;
+    }
+
+    .wine-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .wine-content h3 {
+        font-size: 1.375rem;
+        margin: 0 5% 50px;
+    }
+
+    .wine-content p {
+        font-size: 0.8125rem;
+    }
+
+    .dish-menu-primi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+    }
+
+    .tile {
+        height: 100px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .tile-container {
+        margin: 5%;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 70%;
+        height: 70%;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+
+    .newsletter-form button {
+        width: 70%;
+        margin-left: 5%;
+    }
+
+    footer {
+        padding: 12px 0;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+        margin-left: 5%;
+    }
+    .footer-container p {
+        font-size: 0.5rem;
+    }
+
+    .tile .caption {
+        font-size: 0.8125rem;
+        opacity: 0;
+        bottom: -10px;
+        transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+
+    .tile.active .caption {
+        opacity: 1;
+    }
+
+    .tile:focus .caption,
+    .tile:active .caption {
+        opacity: 1;
+        bottom: -10px;
+    }
+
+    .tile:hover {
+        transform: scale(1.05);
+    }
+
+}
+
+@media (min-width: 431px) {
+
+    .main-content h1 {
+        font-size: 2.25rem;
+        position: relative;
+        margin-bottom: 5%;
+    }
+
+    .main-content p {
+        font-size: 1.5rem;
+        margin-bottom: 15%;
+        text-align: center;
+        animation: tracking-in-expand-fwd-bottom 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        position: relative;
+    }
+
+    .dish-menu-primi h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    p span {
+        font-size: 0.8125rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        text-align: center;
+    }
+
+    .newsletter-content {
+        margin: 5%;
+    }
+
+    .tile .caption {
+        font-size: 0.8125rem;
+        opacity: 0;
+        bottom: -10px;
+        transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+
+    .tile.active .caption {
+        opacity: 1;
+    }
+
+    .tile:focus .caption,
+    .tile:active .caption {
+        opacity: 1;
+        bottom: -10px;
+    }
+
+    .tile:hover {
+        transform: scale(1.05);
+    }
+
+
+
+}
+
+@media (max-width: 675px) {
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .newsletter-content h3 {
+        font-size: 0.875rem;
+        text-align: center;
+        margin-right: 5%;
+    }
+
+    .newsletter-content p {
+        font-size: 0.75rem;
+        margin-bottom: 5%;
+        text-align: center;
+        margin-right: 5%;
+    }
+
+    .newsletter-form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        margin-bottom: 15%;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 70%;
+        height: 70%;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+
+    .newsletter-form button {
+        width: 70%;
+        margin-left: 5%;
+    }
+
+    .tile .caption {
+        font-size: 0.8125rem;
+        opacity: 0;
+        bottom: -30px;
+        transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+
+    .tile.active .caption {
+        opacity: 1;
+    }
+
+    .tile:focus .caption,
+    .tile:active .caption {
+        opacity: 1;
+        bottom: -30px;
+    }
+
+    .tile:hover {
+        transform: scale(1.05);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 65px;
+    }
+
+    .nav-container .hamburger {
+        display: block;
+    }
+
+    .nav-container .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 100%;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-container .menu.active {
+        display: flex;
+    }
+
+    .hamburger div {
+        width: 28px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 20px 0 0;
+        transition: 0.4s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu a:hover {
+        background-color: #333;
+    }
+
+    .main-content h1 {
+        font-size: 2.25rem;
+        margin-bottom: 45%;
+        position: absolute;
+    }
+
+    .main-content p {
+        font-size: 1.5rem;
+        margin-bottom: 15%;
+        text-align: center;
+        animation: tracking-in-expand-fwd-bottom 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        position: relative;
+    }
+
+    .reservation-content, .about-content {
+        flex-direction: column;
+    }
+
+    .reservation-content img, .about-content img {
+        margin: 20px 0;
+        max-width: 35%;
+    }
+
+    .about-content-child h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+        margin-top: 8%;
+    }
+
+    .reservation-content-child p, .about-content-child p {
+        margin: 5%;
+        font-size: 1rem;
+    }
+
+    .reservation-content-child h3 {
+        margin-bottom: 2%;
+        font-size: 1.5rem;
+    }
+
+    .about-content img {
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .wine-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .wine-content h3 {
+        font-size: 1.375rem;
+        margin: 0 5% 50px;
+    }
+
+    .wine-content p {
+        font-size: 0.9375rem;
+    }
+
+    .primi {
+        margin-bottom: 20%;
+    }
+
+
+    .tiles p:first-child {
+        margin: 15% 5% 5%;
+        font-size: 1.375rem;
+    }
+
+    .tiles p span {
+        font-size: 1rem;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .tiles {
+        width: auto;
+        scroll-snap-align: center;
+        background-color: #f9f9f9;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .tile {
+        height: 120px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+
+    .tile .caption {
+        font-size: 0.8125rem;
+        opacity: 0;
+        bottom: -30px;
+        transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+
+    .tile.active .caption {
+        opacity: 1;
+    }
+
+    .tile:focus .caption,
+    .tile:active .caption {
+        opacity: 1;
+        bottom: -30px;
+    }
+
+    .tile:hover {
+        transform: scale(1.05);
+    }
+
+    .tile-container {
+        margin-bottom: 20%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .dish-menu-secondi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+        height: 80vh;
+        width: auto;
+    }
+
+    .secondi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .secondi-child h4 {
+        font-size: 1.375rem;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .secondi-child p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .secondi-child p span {
+        font-size: 0.8125rem;
+    }
+
+    .dish-menu-secondi img {
+        display: none;
+    }
+
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 30vh;
+        text-align: center;
+    }
+
+    .newsletter-content {
+        margin-bottom: 10px;
+    }
+
+
+    .newsletter-form button:hover {
+        background-color: #333;
+    }
+
+    footer {
+        padding: 12px 0;
+    }
+
+
+}
+
+@media (max-width: 820px) {
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 65px;
+    }
+
+
+    .reservation-content, .about-content {
+        flex-direction: column;
+    }
+
+    .reservation-content img, .about-content img {
+        margin: 20px 0;
+        max-width: 35%;
+    }
+
+    .about-content-child h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+        margin-top: 8%;
+    }
+
+    .reservation-content-child p, .about-content-child p {
+        margin: 5%;
+    }
+
+
+    .wine-content h3 {
+        font-size: 1.5rem;
+        margin: 0 5% 50px;
+    }
+
+    .wine-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+
+    .primi {
+        margin-bottom: 20%;
+        margin-left: 5%;
+    }
+
+    .primi-child p {
+        text-align: center;
+    }
+
+    .primi-child h4 {
+        font-size: 1.75rem;
+        margin-right: 5%;
+    }
+
+
+    .dish-menu-primi h3 {
+        margin-top: 40%;
+        margin-left: 10%;
+        margin-bottom: 10%;
+    }
+
+    .primi-child h4 {
+        font-size: 1.5rem;
+    }
+
+    .dish-menu-primi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+    }
+
+
+    .tiles p span {
+        font-size: 1rem;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .tiles {
+        scroll-snap-align: center;
+        background-color: #f9f9f9;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .tile-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+        margin-top: 25%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .tile {
+        height: 150px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .tile .caption {
+        font-size: 0.8125rem;
+        opacity: 0;
+        transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+
+    .tile.active .caption {
+        opacity: 1;
+    }
+
+    .tile:hover .caption{
+        opacity: 1;
+        bottom: -18px;
+    }
+
+    .tile:focus .caption,
+    .tile:active .caption {
+        opacity: 1;
+        bottom: -30px;
+    }
+
+    .tile:hover {
+        transform: scale(1.05);
+    }
+
+
+    .dish-menu-secondi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+        height: 100vh;
+        width: auto;
+    }
+
+    .secondi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8%;
+    }
+
+
+    .dish-menu-secondi img {
+        display: none;
+    }
+
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 30vh;
+        text-align: center;
+    }
+
+    .newsletter-content {
+        margin-bottom: 10px;
+    }
+
+    .newsletter-content h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-content p {
+        font-size: 0.8125rem;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px 20px;
+        font-size: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        outline: none;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 0.8125rem;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 3%;
+        width: 100%;
+    }
+
+    .newsletter-form button:hover {
+        background-color: #333;
+    }
+
+}
+
+@media (max-width: 1024px) and (min-width: 821px) {
+
+    .main-content h1 {
+        font-size: 2.25rem;
+        margin-bottom: 30%;
+        position: absolute;
+    }
+
+    .main-content p {
+        font-size: 1.5rem;
+        margin-bottom: 15%;
+        text-align: center;
+        animation: tracking-in-expand-fwd-bottom 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        position: relative;
+    }
+
+    .reservation-content, .about-content {
+        flex-direction: column;
+    }
+
+    .reservation-content img {
+        margin-top: 20%;
+        margin-bottom: 5%;
+        max-width: 35%;
+    }
+
+    .about-content img {
+        margin-bottom: 30%;
+        max-width: 35%;
+    }
+
+    .about-content-child h3 {
+        margin-bottom: 5%;
+        margin-top: 35%;
+    }
+
+    .about-content-child p {
+        margin: 5%;
+        font-size: 1rem;
+    }
+
+    .reservation-content-child h3 {
+        margin-bottom: 2%;
+        font-size: 1.5rem;
+    }
+
+    .reservation-content-child p {
+        font-size: 1rem;
+    }
+
+    .reservation-content-child button {
+        margin-bottom: 10%;
+    }
+
+
+    .wine-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .wine-content h3 {
+        font-size: 1.5rem;
+        margin: 0 5% 50px;
+    }
+
+    .wine-content p {
+        font-size: 1.25rem;
+    }
+
+    .primi {
+        margin-bottom: 20%;
+        margin-left: 5%;
+    }
+
+    .primi-child p {
+        font-size: 1.375rem;
+        text-align: center;
+    }
+
+    .primi-child h4 {
+        font-size: 1.375rem;
+        margin-right: 5%;
+    }
+
+    .primi-child p span {
+        font-size: 1.125rem;
+    }
+
+    .dish-menu-primi h3 {
+        font-size: 2.25rem;
+        margin-top: 12%;
+        margin-left: 10%;
+        margin-bottom: 10%;
+    }
+
+    .primi-child h4 {
+        font-size: 1.75rem;
+    }
+
+    .dish-menu-primi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+    }
+
+    .tiles p:first-child {
+        margin-top: 8%;
+        font-size: 1.375rem;
+    }
+
+    .tiles p span {
+        font-size: 1.125rem;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .tiles {
+        scroll-snap-align: start;
+        background-color: #f9f9f9;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .tile {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .tile .caption {
+        font-size: 1rem;
+        opacity: 0;
+        bottom: -30px;
+        transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+
+    .tile.active .caption {
+        opacity: 1;
+    }
+
+    .tile:focus .caption,
+    .tile:active .caption {
+        opacity: 1;
+        bottom: -30px;
+    }
+
+    .tile:hover {
+        transform: scale(1.05);
+    }
+
+    .tile-container {
+        margin-bottom: 20%;
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .dish-menu-secondi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+        width: auto;
+    }
+
+    .secondi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+
+    .secondi-child h4 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .secondi-child p {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .secondi-child p span {
+        font-size: 1.125rem;
+    }
+
+    .dish-menu-secondi img {
+        display: none;
+    }
+
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 30vh;
+        text-align: center;
+    }
+
+    .newsletter-content {
+        margin-bottom: 10px;
+    }
+
+    .newsletter-content h3 {
+        font-size: 1.125rem;
+    }
+
+    .newsletter-content p {
+        font-size: 1rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        outline: none;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 3%;
+        width: 100%;
+    }
+
+    .newsletter-form button:hover {
+        background-color: #333;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .footer-content p {
+        font-size: 0.875rem;
+    }
+
+    .footer-container {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 1366px){
+    .reservation-content img {
+        margin-top: 20%;
+        margin-bottom: 5%;
+        max-width: 50%;
+    }
+
+    .about-content img {
+        margin-bottom: 25%;
+        max-width: 50%;
+    }
+
+    .dish-menu-primi h3 {
+        margin-top: 38%;
+        margin-left: 10%;
+        margin-bottom: 10%;
+    }
+
+    .tile-container {
+        margin-bottom: 20%;
+        margin-top: 15%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .tile-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        flex-direction: row;
+    }
+
+    .tile {
+        width: 200px;
+        height: auto;
+        margin-top: 8%;
+    }
+
+    .dish-menu-secondi img {
+        max-width: 40%;
+        margin-right: 5%;
+    }
+
+    .secondi-child {
+        margin-left: 5%;
+    }
+}

@@ -1,0 +1,267 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+body {
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    height: 75px;
+    position: relative;
+}
+
+nav .container {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo {
+    flex: 1;
+    text-align: center;
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* 24px */
+    font-weight: bold;
+    background: none;
+}
+
+.main-container {
+    padding: 40px 20px;
+}
+
+.reservation-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-content h3 {
+    margin-top: 0;
+    font-size: 1.5rem; /* 24px */
+}
+
+.reservation-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-content label {
+    margin-top: 10px;
+    font-size: 1rem; /* 16px */
+}
+
+.reservation-content input,
+.reservation-content select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem; /* 16px */
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+#reserve-table {
+    padding: 10px 20px;
+    font-size: 1rem; /* 16px */
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+#reserve-table:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 0 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-container {
+    margin-left: 5%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-content p {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.870rem; /* 14px */
+}
+
+.footer-content span {
+    font-weight: lighter;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        padding: 10px;
+    }
+
+    .main-container {
+        padding: 30px 15px;
+    }
+
+    .reservation-content {
+        padding: 15px;
+    }
+
+    .reservation-content h3 {
+        font-size: 1.375rem; /* 22px */
+    }
+
+    .reservation-content label,
+    .reservation-content input,
+    .reservation-content select {
+        font-size: 0.9375rem; /* 15px */
+    }
+
+    #reserve-table {
+        padding: 9px 18px;
+        font-size: 0.9375rem; /* 15px */
+    }
+
+    footer {
+        padding: 0 0;
+    }
+
+    .footer-container{
+        padding: 0 20px;
+        margin-left: 5%;
+    }
+
+    .footer-container p{
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    nav .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .main-container {
+        padding: 20px 10px;
+    }
+
+    .reservation-content {
+        padding: 15px;
+    }
+
+    .reservation-content h3 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .reservation-content label,
+    .reservation-content input,
+    .reservation-content select {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    #reserve-table {
+        padding: 8px 16px;
+        font-size: 0.875rem; /* 14px */
+    }
+
+    footer {
+        padding: 0 0;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+        margin-left: 5%;
+    }
+
+    .footer-content p {
+        font-size: 0.5rem; /* 12px */
+    }
+}
+
+@media (max-width: 480px) {
+    nav .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav .logo {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .main-container {
+        padding: 15px 10px;
+    }
+
+    .reservation-content {
+        padding: 10px;
+    }
+
+    .reservation-content h3 {
+        font-size: 1.125rem; /* 18px */
+    }
+
+    .reservation-content label,
+    .reservation-content input,
+    .reservation-content select {
+        font-size: 0.8125rem; /* 13px */
+    }
+
+    #reserve-table {
+        padding: 7px 14px;
+        font-size: 0.8125rem; /* 13px */
+    }
+
+    footer {
+        padding: 0 0;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+        margin-left: 5%;
+    }
+
+    .footer-container p {
+        font-size: 0.5rem; /* 8px */
+    }
+}

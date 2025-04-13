@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Il Colibrì - Tradycyjna kuchnia włoska z prawdziwymi włoskimi składnikami. Skosztuj wyśmienitych dań i zatrzymaj się w naszej wyjątkowej piwniczce z winami. Rezerwuj stolik już dziś!">
+    <title>Il Colibri</title>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap"
+          as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap"
+          media="print" onload="this.media='all'">
+    <style>
+        .main-content h1 {
+            font-size: 3rem;
+            font-family: 'Lexend Giga', sans-serif;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/il-colibri-style.css">
+    <script src="js/il-colibri-script.js" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="il-colibri.html">Il Colibrì</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a href="#menu">Menu</a>
+                <a href="#about">O kuchni</a>
+                <a href="#reservation">Rezerwacja</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main-container">
+    <section class="main-content">
+        <h1>Il Colibrì</h1>
+        <p>TRADYCYJNA KUCHNIA WŁOSKA</p>
+    </section>
+
+    <section class="reservation" id="reservation">
+        <div class="reservation-content">
+            <img src="img/zdj1.webp" loading="lazy" alt="Restauracja">
+            <div class="reservation-content-child">
+                <h3>Il Colibrì</h3>
+                <p>Sercem naszej restauracji jest lokal przy ul. Wiktora Emmanuela 4. To tam narodził się Il
+                    Colibrì.
+                    Wielu Gości mówi, że czują się tu jak we włoskiej małej osterii. I taki właśnie był nasz plan!
+                    Aby
+                    Goście mogli poczuć się jak w domu, włoski klimat. Pyszne jedzenie, profesjonalna obsługa – to
+                    recepta na udane i niezapomniane spotkanie.
+                </p>
+                <button id="go-to-reservation" onclick="location.href='reservation.html'">Rezerwuj Stolik</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-content-child">
+                <h3>Włoska Kuchnia</h3>
+                <p>Szef Kuchni jest wizytówką każdej restauracji, jest kreatorem dań, których smak pozostaje na
+                    długo w
+                    pamięci Gości. IL COLIBRÌ może poszczycić się wybitnym Szefem Kuchni, jakim jest Paolo Morandi.
+                    Paolo przez całe życie zdobył ogrom wiedzy na różnych stanowiskach, u boku wielu doskonałych
+                    Szefów
+                    Kuchni, gdzie miał okazję profesjonalnie szlifować swoje umiejętności kulinarne.
+                </p>
+            </div>
+            <img src="img/zdj2.webp" loading="lazy" alt="Nasza Kuchnia">
+        </div>
+    </section>
+
+    <section class="wine" id="wine">
+        <div class="wine-content">
+            <p>Odwiedź naszą urokliwą piwniczkę z winami włoskimi w restauracji Il Colibrì, gdzie znajdziesz bogaty
+                wybór najwykwintniejszych win z różnych regionów Włoch. Zanurz się w autentycznym smaku Italii,
+                eksplorując naszą kolekcję win, która została starannie dobrana, by zaspokoić nawet najbardziej
+                wyrafinowane gusta.
+            </p>
+            <h3>Piwniczka Il Colibrì</h3>
+        </div>
+    </section>
+
+    <section class="dish-menu-primi" id="menu">
+        <h3>POZNAJ NASZE MENU</h3>
+        <div class="primi">
+            <div class="primi-child">
+                <h4>PRIMI</h4>
+                <p>Pappardelle con spalla di manzo 57 PLN<span>Pappardelle / łopatka wołowa / pieczarki / oliwa truflowa / grana padano</span>
+                </p>
+                <p>Fettuccine alla barbabietola e pistacchi 44 PLN<span>Fettuccine / burak / pistacje / chips z parmezanu / puder z buraka
+                </span>
+                </p>
+                <p>Fettuccine con gamberi 56
+                    PLN<span>Fettuccine z krewetkami / fenkuł / chilli / pomidory San Marzano</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tiles">
+        <p>Wyróżnia nas jakość i prawdziwe włoskie składniki</p>
+        <p><span>Dlaczego nasze potrawy są wyjątkowe? Bo wkładamy w nie całe serce, najlepsze włoskie dodatki oraz szczyptę pikanterii.</span>
+        </p>
+        <div class="tile-container">
+            <figure class="tile">
+                <img src="img/pomidory-sanmarzano.webp" loading="lazy" alt="Pomidory San Marzano">
+                <figcaption class="caption">Pomidory San Marzano</figcaption>
+            </figure>
+            <figure class="tile">
+                <img src="img/pancetta.webp" loading="lazy" alt="Pancetta">
+                <figcaption class="caption">Pancetta</figcaption>
+            </figure>
+            <figure class="tile">
+                <img src="img/oliwki_leccino.webp" loading="lazy" alt="Oliwki Leccino">
+                <figcaption class="caption">Oliwki Leccino</figcaption>
+            </figure>
+            <figure class="tile">
+                <img src="img/nduja.webp" loading="lazy" alt="'Nduja">
+                <figcaption class="caption">'Nduja</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="dish-menu-secondi">
+        <div class="secondi">
+            <div class="secondi-child">
+                <h4>SECONDI</h4>
+                <p>
+                    Risotto al porro 42 PLN
+                    <span>Risotto z pieczonym porem / puree z pora / chrust z pora / majonez porowy / puder porowy
+                    </span>
+                </p>
+                <p>
+                    Orata con grano saraceno 76 PLN
+                    <span>
+                    Dorada / kasza gryczana / piklowana cebula / jarmuż / tortellini z dorszem / sos kukurydziany
+                    </span>
+                </p>
+                <p>
+                    Bistecca 125 PLN
+                    <span>Polędwica wołowa / puree z topinamburu / mini warzywa / pieczony ziemniak / jarmuż / demi glace
+                    </span>
+                </p>
+            </div>
+        </div>
+        <img src="img/zdj4.webp" loading="lazy" alt="Risotto">
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>NEWSLETTER</h3>
+            <p>Zapisz się, aby otrzymywać nasze promocje i nowości!</p>
+        </div>
+        <div class="newsletter-form">
+            <form>
+                <input type="email" placeholder="E-MAIL">
+                <button type="submit" id="newsletter-email">Zapisz się</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>GODZINY OTWARCIA:<span>WT - ND 10:00 - 22:00</span></p>
+        </div>
+        <div class="footer-content">
+            <p>LOKALIZACJA:<span>UL. Wiktora Emanuela 4, 35-326 RZESZÓW</span></p>
+        </div>
+        <div class="footer-content">
+            <p>KONTAKT:<span>TEL. 666 555 444, osteria@ilcolibri.pl</span></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
